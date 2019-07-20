@@ -21,7 +21,7 @@ int main(){
     rotate(RS45, 45)
     run(S199, 150);
 
-    int u_num = get_number(); // Uターンエリアの数字を格納
+    int u_num = get_number(75); // Uターンエリアの数字を格納
     led_on(u_num);
 
     rotate(RS18, 180);

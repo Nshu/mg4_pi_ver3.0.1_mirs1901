@@ -40,6 +40,7 @@ void run(int speed, int dist){
 
 void rotate(int speed, int angle){
     //int speed = speed, dist = R_Direction * angle;
+    run_state_t state;
     request_set_runmode(ROT, speed, R_Direction * angle);
     while(1){
         request_get_runmode(&state, &speed, &angle);

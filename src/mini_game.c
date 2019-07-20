@@ -11,6 +11,8 @@
 int main(){
     if(arduino_open() != 0) return -1;
 
+    mode_select();
+
     run(S200, 300);
     rotate(RS90, 90);
     run(S200, 350);

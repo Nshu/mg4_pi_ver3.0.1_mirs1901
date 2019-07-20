@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "request.h"
 #include <wiringPi.h>
-#include "io.c"
+#include "io.h"
+#include "number.h"
 
 int R_Direction;
 

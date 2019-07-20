@@ -9,6 +9,7 @@ PRGS :=
 PRGS += test_io test_uss test_request test_direction
 PRGS += test_capture test_number test_circle test_dir_num
 PRGS += test_server test_position test_camera
+PRGS += mini_game
 PRGS += pilot
 
 # オブジェクト
@@ -18,6 +19,7 @@ OBJS_NUM := $(addprefix $(DIR_OBJ)/, number_search.o number_detect.o)
 OBJS_CIR := $(addprefix $(DIR_OBJ)/, color_binarize.o circle_detect.o)
 OBJS_SVR := $(addprefix $(DIR_OBJ)/, server.o)
 OBJS_POS := $(addprefix $(DIR_OBJ)/, position.o)
+OBJS_GAM := $(addprefix $(DIR_OBJ)/, mini_game_function.o)
 
 # コンパイルオプション
 CC      := gcc
@@ -81,3 +83,5 @@ test_server: $(OBJS_SVR) $(DIR_OBJ)/test_server.o
 test_position: $(OBJS_POS) $(DIR_OBJ)/test_position.o
 	$(CC) $(LDFLAGS) $^ -o $@
 
+mini_game: $(OBJS_RUN) $(OBJS_CAP) $(OBJS_NUM) $(OBJS_CIR) $(OBJS_SVR) $(OBJS_POS) $(OBJS_GAM) $(DIR_OBJ)/mini_game.o
+	$(CC) $(LDFLAGS) $^ -o $@

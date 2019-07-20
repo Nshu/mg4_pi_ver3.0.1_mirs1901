@@ -1,0 +1,8 @@
+//
+// Created by abata on 2019/07/20.
+//
+
+#ifndef MG4_PI_VER3_0_1_MINI_GAME_FUNCTION_H
+#define MG4_PI_VER3_0_1_MINI_GAME_FUNCTION_H
+
+#endif //MG4_PI_VER3_0_1_MINI_GAME_FUNCTION_H

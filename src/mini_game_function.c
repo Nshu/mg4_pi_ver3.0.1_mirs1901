@@ -4,11 +4,14 @@
 #include "io.c"
 
 int R_Direction;
+<<<<<<< HEAD
 
 // 赤、黄色、緑のLED用のピン番号
 #define PIN_LED_R 10
 #define PIN_LED_Y 10
 #define PIN_LED_G 10
+=======
+>>>>>>> origin/master
 
 void mode_select(){
     int mode;

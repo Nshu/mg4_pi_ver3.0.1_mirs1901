@@ -28,7 +28,7 @@ void mode_select(){
     }
 }
 
-void run(int speed_, int dist_){
+void run(int speed, int dist){
     //int speed = speed, dist = dist;
     run_state_t state;
     request_set_runmode(STR, speed, dist);

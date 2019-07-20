@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include "request.h"
+#include <wiringPi.h>
+#include "io.c"
 
 int R_Direction;
+
+// 赤、黄色、緑のLED用のピン番号
+#define PIN_LED_R 10
+#define PIN_LED_Y 10
+#define PIN_LED_G 10
 
 void mode_select(){
     int mode;
@@ -57,4 +64,23 @@ int get_number(int dist) {
 }
 
 void led_on(int u_num){
+    io_open();
+
+    pinMode(PIN_LED_R, OUTPUT);
+    pinMode(PIN_LED_Y, OUTPUT);
+    pinMode(PIN_LED_G, OUTPUT);
+
+    switch(u_num){
+        case 3:
+            digitalWrite(PIN_LED_R, HIGH);
+            break;
+        case 4:
+            digitalWrite(PIN_LED_Y, HIGH);
+            break;
+        case 5:
+            digitalWrite(PIN_LED_G, HIGH);
+            break;
+        default:
+            break;
+    }
 }

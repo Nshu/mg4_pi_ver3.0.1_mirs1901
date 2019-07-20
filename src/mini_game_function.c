@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "request.h"
 
-static int R_Direction;
+int R_Direction;
 
 void mode_select(){
     int mode;
@@ -41,7 +41,19 @@ void rotate(int speed, int angle){
 }
 
 int get_number(int dist) {
-    return 3;
+    int ans[NUM_LEN];
+
+    number_detect(dist);
+    number_get(ans);
+
+    if(
+        (ans[0] == 3) ||
+        (ans[0] == 4) ||
+        (ans[0] == 5)
+        ){
+        return ans[0];
+    }
+    return -1;
 }
 
 void led_on(int u_num){

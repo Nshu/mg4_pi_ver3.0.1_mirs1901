@@ -18,7 +18,7 @@ int main(){
     run(S200, 350);
     rotate(RS45, 45);
     run(S200, 212);
-    rotate(RS45, 45)
+    rotate(RS45, 45);
     run(S199, 150);
 
     int u_num = get_number(75); // Uターンエリアの数字を格納

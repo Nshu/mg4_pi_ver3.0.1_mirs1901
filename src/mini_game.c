@@ -32,7 +32,19 @@ int main(){
     run(S200, 350);
     rotate(RS90, -90);
 
-    run(S200, 100 * (u_num - 2) );
+    switch(u_num){
+        case 3:
+            run(S199, 100);
+            break;
+        case 4:
+            run(S200, 200);
+            break;
+        case 5:
+            run(S200, 300);
+            break;
+        default:
+            break:
+    }
 
     arduino_close();
     return 0;

@@ -28,7 +28,7 @@ int main(){
     run(S200, 250);
     rotate(RS45, -45);
     run(S199, 71);
-    rotate(RS45, 45);
+    rotate(RS45, -45);
     run(S200, 350);
     rotate(RS90, -90);
 

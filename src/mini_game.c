@@ -43,7 +43,7 @@ int main(){
             run(S200, 300);
             break;
         default:
-            break:
+            break;
     }
 
     arduino_close();

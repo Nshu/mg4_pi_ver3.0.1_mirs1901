@@ -19,13 +19,13 @@ int main(){
     rotate(RS45, 45);
     run(S200, 212);
     rotate(RS45, 45);
-    run(S199, 150);
+    run(S199, 125);
 
     int u_num = get_number(75); // Uターンエリアの数字を格納
     led_on(u_num);
 
     rotate(RS18, 180);
-    run(S200, 250);
+    run(S200, 225);
     rotate(RS45, -45);
     run(S199, 71);
     rotate(RS45, -45);

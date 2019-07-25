@@ -90,3 +90,16 @@ void led_on(int u_num){
             break;
     }
 }
+
+void led_off(){
+    io_open();
+
+    pinMode(PIN_LED_R, OUTPUT);
+    pinMode(PIN_LED_Y, OUTPUT);
+    pinMode(PIN_LED_G, OUTPUT);
+
+    digitalWrite(PIN_LED_R, LOW);
+    digitalWrite(PIN_LED_G, LOW);
+    digitalWrite(PIN_LED_B, LOW);
+}
+

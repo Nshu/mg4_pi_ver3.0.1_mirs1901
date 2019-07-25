@@ -46,6 +46,8 @@ int main(){
             break;
     }
 
+    led_off();
+
     arduino_close();
     return 0;
 }
